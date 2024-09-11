@@ -49,3 +49,5 @@ def calc(num1, num2, operator) :
         return a - b
 
 print(calc(5,7,'-'))
+
+

@@ -37,10 +37,13 @@ y = [1, 2, 3, 4]
 # linestyle : 선 모양
 # marker : 마커모양
 # 그래프 추가
-plt.plot(x, y, marker='x', color='red', linestyle='--')  # Plot some data on the Axes.
+#plt.plot(x, y, marker='x', color='red', linestyle='--')  # Plot some data on the Axes.
 
-x1 = [2,3,4,5]
-y1 = [1,2,3,4]
+#x1 = [2,3,4,5]
+#y1 = [1,2,3,4]
+x1=['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+y1=[47.9, 1.0, 10.5, 96.9, 155.6, 195.6, 459.9, 298.1, 134.5, 31.0, 81.9, 85.9]
+
 # 그래프 추가
 plt.plot(x1,y1)
 
