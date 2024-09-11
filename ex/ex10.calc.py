@@ -142,3 +142,9 @@ print('avg : ', avg(1,2,3,4,5,6,7,8,9,10))
 # datetime
 # random
 # 함수(def, 매개변수, 반환)
+
+
+# pip 환경변수 
+# : 어느경로에서든지 명령어를 실행 할수 있도록 하는 작업
+pip install matplotlib
+pip list
