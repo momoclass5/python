@@ -21,36 +21,42 @@ class 계산기 :
     
     def 나누기(self) :
         return self.num2 / self.num1
-    
 
-try :
-    calc = 계산기()
-except TypeError as te:
-    print(te)
-    calc = 계산기(0,0)
+print('모듈이 직접 실행 되었는지 확인하는 변수')
+print('__name__ : ', __name__)
+# 모듈이 직접 실행 되었는지 다른 모듈에 의해서 실행 되었는지
+# 구분하는데 사용되는 특별한 변수 
+# 모듈이 직접 실행 되었다면 __name__은  __main__으로 지정
+if __name__ == '__main__' :
 
-# 인스턴스의 변수이름으로 접근하여 메서드, 변수를 사용 할 수 있다
-print('인스턴스변수 calc.num1 : ', calc.num1 )
-print('메서드 calc.더하기() : ', calc.더하기() )
+    try :
+        calc = 계산기()
+    except TypeError as te:
+        print(te)
+        calc = 계산기(0,0)
+
+    # 인스턴스의 변수이름으로 접근하여 메서드, 변수를 사용 할 수 있다
+    print('인스턴스변수 calc.num1 : ', calc.num1 )
+    print('메서드 calc.더하기() : ', calc.더하기() )
 
 
-try :
-    num = 10/0
-except ZeroDivisionError :
-    print('0으로 나눌수 없습니다')
+    try :
+        num = 10/0
+    except ZeroDivisionError :
+        print('0으로 나눌수 없습니다')
 
-try :
-    num = 10/2
-    # input의 반환타입은 문자 이므로 숫자로 변환 하는 처리
-    num = int(input('숫자를 입력 해주세요'))
-except ZeroDivisionError as err:
-    print(f'err : {err}')
-except ValueError as ve :
-    print(f'err : {ve}')   
-except :
-    print('error')
-else : 
-    print('정상적으로 실행 되었을때만 실행')
+    try :
+        num = 10/2
+        # input의 반환타입은 문자 이므로 숫자로 변환 하는 처리
+        num = int(input('숫자를 입력 해주세요'))
+    except ZeroDivisionError as err:
+        print(f'err : {err}')
+    except ValueError as ve :
+        print(f'err : {ve}')   
+    except :
+        print('error')
+    else : 
+        print('정상적으로 실행 되었을때만 실행')
 
 # 사용자 정의 예외만들기
 # Exception 클래스를 상속 하여 사용자 정의 예외클래스를 정의 할 수 있다
