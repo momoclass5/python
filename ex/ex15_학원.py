@@ -19,6 +19,7 @@ class Student :
 
 
 class Academy :
+    name = '휴먼컴퓨터 학원'
     def __init__(self) -> None:
         self.teacher = None
         self.students= []
@@ -30,6 +31,10 @@ class Academy :
     def add_student(self, student) :
         # 학생 리스트에 요소를 추가
         self.students.append(student)
+    
+    # 학생 목록을 받아와서 학생 목록에 추가
+    def add_students(self, students) :
+        self.students += students
     
     # 교사정보를 문자열로 반환    
     def get_teacher_info(self) : 
@@ -43,10 +48,11 @@ class Academy :
         return s_str
     
     def __str__(self) -> str :
+        
         # 클래스 내부의 인스턴스(멤버변수)를 호출 할때에도 self를 붙여 주어야 합니다!!!!!
         # 내부함수를 호출할때 self를 넣지 않아요!!
-        s = self.get_teacher_info() + '\n'+  self.get_students_info()
-        print('================',s)
+        s = self.name + '\n' + self.get_teacher_info() + '\n'+  self.get_students_info()
+        #print('================',s)
         return s
      
     
