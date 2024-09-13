@@ -42,7 +42,16 @@ class MyClass :
     @staticmethod
     def static_method() : 
         return "정적메서드"
-        
+    
+    # 객체를 출력 할때 실행되는 메서드    
+    # 반환값이 출력됨
+    def __str__(self) -> str:
+        return 'MyClass'
+    
+    # 디버깅 용도로 사용되며 객체가 어떻게 생성되었는지를 반환
+    # !r : 표현식안의 값을 문자열로 반환
+    def __repr__(self) -> str:
+        return f"MyClass({self.instance_var!r})"
     
 print(MyClass.static_method())
 # 생성자의 매개변수가 있다면 매개변수를 넣어서 호출     
@@ -68,6 +77,9 @@ myClass.set_class_var('test')
 # 클래스 변수
 print(f'var : {myClass.var}')
 print(f'var : {myClass1.var}')
+
+print(myClass1.__repr__())
+
 
 
 # 객체 실습
